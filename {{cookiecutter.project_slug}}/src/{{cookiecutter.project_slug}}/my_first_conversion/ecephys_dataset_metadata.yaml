@@ -1,0 +1,15 @@
+NWBFile:
+  related_publications: >
+    One of the following formats:
+    DOI: ####
+    https://doi.org/### link
+    APA or MLA citation of the publication
+  session_description: >
+    A rich text description of the experiment. Can also just be the abstract of the publication.
+  institution: My Institution
+  lab: "{{cookiecutter.lab}}"
+  experimenter:
+    - Last, First Middle
+    - Last, First Middle
+Subject:
+  species: Rattus norvegicus

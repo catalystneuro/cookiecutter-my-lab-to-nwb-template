@@ -1,0 +1,13 @@
+name: my-lab-to-nwb-ecephys-dataset
+channels:
+- defaults
+- anaconda
+- conda-forge
+dependencies:
+- python==3.9
+- ipython
+- pip
+- git
+- pip:
+  - -r my_ecephys_dataset_requirements.txt
+  - -e .
