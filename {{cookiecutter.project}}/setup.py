@@ -20,7 +20,6 @@ setup(
     url = "https://github.com/catalystneuro/{{cookiecutter.project}}"
     packages=find_packages(where="src"),
     package_dir={"": "src"},
-    packages=find_packages(),
     include_package_data=True,
     python_requires=">=3.7",
     install_requires=install_requires,
