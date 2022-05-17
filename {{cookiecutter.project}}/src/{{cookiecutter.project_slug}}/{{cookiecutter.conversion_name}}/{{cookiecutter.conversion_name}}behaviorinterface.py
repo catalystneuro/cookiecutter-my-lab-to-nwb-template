@@ -3,7 +3,7 @@ from nwb_conversion_tools import BaseDataInterface
 
 
 class {{cookiecutter.conversion_name_camel_case}}BehaviorInterface(BaseRecordingExtractorInterface):
-    """My behavior interface specific to the ecephys experiments."""
+    """My behavior interface docstring"""
 
     def __init__(self):
         # Point to data

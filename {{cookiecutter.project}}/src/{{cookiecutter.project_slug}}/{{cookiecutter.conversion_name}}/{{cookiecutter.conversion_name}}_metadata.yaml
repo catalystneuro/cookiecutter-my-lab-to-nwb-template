@@ -7,7 +7,7 @@ NWBFile:
   session_description: >
     A rich text description of the experiment. Can also just be the abstract of the publication.
   institution: My Institution
-  lab: "{{cookiecutter.lab}}"
+  lab: {{cookiecutter.lab}}
   experimenter:
     - Last, First Middle
     - Last, First Middle

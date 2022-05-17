@@ -10,13 +10,16 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
-    name="{{cookiecutter.project_slug}}",
+    name="{{cookiecutter.project}}",
     version="0.0.1",
     description="NWB conversion scripts, functions, and classes for an arbitrary conversion project.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="Cody Baker and Ben Dichter.",
+    author="CatalystNeuro",
     email="ben.dichter@catalystneuro.com",
+    url = "https://github.com/catalystneuro/{{cookiecutter.project}}"
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
     packages=find_packages(),
     include_package_data=True,
     python_requires=">=3.7",
