@@ -17,7 +17,7 @@ setup(
     long_description_content_type="text/markdown",
     author="CatalystNeuro",
     email="ben.dichter@catalystneuro.com",
-    url = "https://github.com/catalystneuro/{{cookiecutter.project}}"
+    url = "https://github.com/catalystneuro/{{cookiecutter.project}}",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     include_package_data=True,
