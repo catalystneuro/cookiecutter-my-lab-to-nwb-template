@@ -45,6 +45,6 @@ The last step is to create an empty repo with the same name as the generated dir
 
 
 To-do:
-* Use to streamline configuration.
+* Use [pre-hooks](https://github.com/samj1912/cookiecutter-advanced-demo) to streamline configuration and reduce number of input-prompts.
 * Find out how to send contents to the current directory (if names match?).
 * Design a conversion specific directory that can be called to add a new conversion.
