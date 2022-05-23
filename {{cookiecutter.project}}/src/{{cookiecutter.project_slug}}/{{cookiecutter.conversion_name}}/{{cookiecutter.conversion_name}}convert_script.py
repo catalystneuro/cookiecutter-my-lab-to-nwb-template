@@ -9,7 +9,6 @@ example_session_id = example_path.stem
 nwbfile_path = example_path / f"{example_session_id}.nwb"
 
 metadata_path = Path(__file__) / "{{cookiecutter.conversion_name}}_metadata.yaml"
-metadata_from_yaml = load_dict_from_file(metadata_path)
 
 source_data = dict(
     Recording=dict(),
@@ -21,6 +20,7 @@ source_data = dict(
 converter = {{cookiecutter.conversion_name_camel_case}}NWBConverter(source_data=source_data)
 
 metadata = converter.get_metadata()
+metadata_from_yaml = load_dict_from_file(metadata_path)
 metadata = dict_deep_update(metadata, metadata_from_yaml)
 
 converter.run_conversion(metadata=metadata, nwbfile_path=nwbfile_path)

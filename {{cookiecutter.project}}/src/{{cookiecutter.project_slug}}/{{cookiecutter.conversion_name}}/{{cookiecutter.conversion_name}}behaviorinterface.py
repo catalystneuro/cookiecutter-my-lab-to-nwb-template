@@ -1,8 +1,7 @@
 """Primary class defining conversion of experiment-specific behavior."""
-from nwb_conversion_tools import BaseDataInterface
+from nwb_conversion_tools.basedatainterface import BaseDataInterface
 
-
-class {{cookiecutter.conversion_name_camel_case}}BehaviorInterface(BaseRecordingExtractorInterface):
+class {{cookiecutter.conversion_name_camel_case}}BehaviorInterface(BaseDataInterface):
     """My behavior interface docstring"""
 
     def __init__(self):
