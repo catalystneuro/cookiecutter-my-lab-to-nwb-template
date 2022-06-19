@@ -1,8 +1,7 @@
 {
-    "lab": "PI_name",
-    "project": "{{cookiecutter.lab + '-lab-to-nwb'}}",
-    "conversion_name": "my_conversion",
-    "conversion_name_camel_case": "{{cookiecutter.conversion_name.replace('_', ' ').title().replace(' ', '')}}",
+    "lab": "name-of-pi",
+    "project": "{{cookiecutter.lab.lower().replace(' ', '-') + '-lab-to-nwb'}}",
+    "conversion_name": "embargo22a",
     "_copy_without_render": [
       ".github/workflows/*"
   ]
