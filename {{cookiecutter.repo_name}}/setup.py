@@ -10,14 +10,14 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
-    name="{{cookiecutter.project}}",
+    name="{{cookiecutter.repo_name}}",
     version="0.0.1",
-    description="NWB conversion scripts, functions, and classes for an arbitrary conversion project.",
+    description="NWB conversion scripts, functions, and classes for an arbitrary conversion repo_name.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="CatalystNeuro",
     email="ben.dichter@catalystneuro.com",
-    url = "https://github.com/catalystneuro/{{cookiecutter.project}}",
+    url = "https://github.com/catalystneuro/{{cookiecutter.repo_name}}",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     include_package_data=True,

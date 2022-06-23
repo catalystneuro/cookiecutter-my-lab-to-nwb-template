@@ -1,4 +1,4 @@
-name: nwb_conversion_env
+name: {{cookiecutter.repo_name_slug}}_env
 channels:
 - defaults
 - anaconda

@@ -1,7 +1,7 @@
 """Primary script to run to convert an entire session of data using the NWBConverter."""
 from nwb_conversion_tools.utils import load_dict_from_file, dict_deep_update
 
-from {{cookiecutter.project_slug}}.{{cookiecutter.conversion_name}} import {{cookiecutter.conversion_name_camel_case}}NWBConverter
+from {{cookiecutter.repo_name_slug}}.{{cookiecutter.conversion_name}} import {{cookiecutter.conversion_name_camel_case}}NWBConverter
 from pathlib import Path
 
 example_path = Path("D:/ExampleNWBConversion")
