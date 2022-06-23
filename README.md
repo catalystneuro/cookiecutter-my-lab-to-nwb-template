@@ -1,11 +1,15 @@
 # Cookiecutter template for CatalystNeuro projects
 This repo serves as a generic template generator for all conversion projects undertaken by the CatalystNeuro team. The project is based and shares the structure of our [generic template](https://github.com/catalystneuro/my-lab-to-nwb-template) and extends it further by means of [cookiecutter](https://github.com/cookiecutter/cookiecutter) to auto-generate the rest of the configuration.
 
-## How to use it
+# How to use it
+
+## 1) Install `cookiecutter`:
 
 Install the latest cookiecutter version if you haven't installed it yet:
 
     pip install -U cookiecutter
+
+## 2) Run `cookiecutter` with this repo and answer some prompts
 
 Then, use the following `cookiecutter` command to generate a `CatalystNeuro` conversion project structure:
 
@@ -14,28 +18,35 @@ Then, use the following `cookiecutter` command to generate a `CatalystNeuro` con
 This will ask some questions that determine the project structure as in the following example:
 
     lab [Lab Name]: Eric Kandel
-    project [eric-kandel-lab-to-nwb]: 
-    conversion_name [embargo22a]: random_author_2021
+    repo_name [eric-kandel-lab-to-nwb]: 
+    conversion_name [embargo2002a]: brenda_milner_2022
 
-Leave the question in blank to accept the default suggestion in square brackets (e)
+Where the `lab` usually corresponds to the principal investigator name, `repo_name` is the name of the github repositry and `conversion_name` is the name of the specific conversion to be carried out. 
 
-Note that empty spaces accept the square bracket suggestions. This will generate a directory (named buzsaki-lab-to-nwb) with all the basic structure for a conversion project:
+Leave the prompt unanswered (blank) to accept the default suggestion in square brackets (e.g. `repo name` will be assigned the value of `eric-kandel-lab-to-nwb` as the space is left blank). We suggest to use the name of the author plus the year for the conversion name (as it is done for `conversion_name` agove.)
 
-    .
+For conversions concerning data under embargo we suggest a name following the pattern described in the brackets (i.e. `embargo22a`). The general form is `embargo{year}{letter}` where year is the year of the conversion and letter can be a, b, c, etc. in case there is more than one conversion that year.
+
+## 3) Copy the generated content to a repo as you need it
+
+After the questions in the prompt are answered as above, `cookiecutter` generates a directory with the following structure:
+
+    eric-kandel-lab-to-nwb/
     ├── LICENSE
+    ├── make_env.yml
+    ├── pyproject.toml
     ├── README.md
     ├── requirements.txt
     ├── setup.py
     └── src
-        ├── buzsaki_lab_to_nwb
-        │   └── random_author_2021
-        │       ├── __init__.py
-        │       ├── random_author_2021behaviorinterface.py
-        │       ├── random_author_2021convert_script.py
-        │       ├── random_author_2021_environment.yaml
-        │       ├── random_author_2021_metadata.yaml
-        │       ├── random_author_2021nwbconverter.py
-        │       └── random_author_2021_requirements.txt
+        ├── eric_kandel_lab_to_nwb
+        │   └── brenda_milner_2022
+        │       ├── brenda_milner_2022behaviorinterface.py
+        │       ├── brenda_milner_2022_convert_script.py
+        │       ├── brenda_milner_2022_metadata.yml
+        │       ├── brenda_milner_2022nwbconverter.py
+        │       ├── brenda_milner_2022_requirements.txt
+        │       └── __init__.py
         └── __init__.py
 
 
