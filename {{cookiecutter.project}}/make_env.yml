@@ -1,0 +1,10 @@
+name: nwb_conversion_env
+channels:
+- defaults
+- anaconda
+- conda-forge
+dependencies:
+- python>=3.9
+- pip
+- pip:
+  - -e .  # This calls the setup and therefore requirements minimal
