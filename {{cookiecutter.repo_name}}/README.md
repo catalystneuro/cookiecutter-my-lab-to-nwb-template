@@ -1,5 +1,5 @@
 # {{cookiecutter.repo_name}}
-NWB conversion scripts for {{cookiecutter.lab}} lab data to the [neuro data without borders](https://nwb-overview.readthedocs.io/) data format.
+NWB conversion scripts for {{cookiecutter.lab}} lab data to the [Neurodata Without Borders](https://nwb-overview.readthedocs.io/) data format.
 
 ## Clone and install
 To run the conversion some basic machinery is needed: **python, git and pip**. For most users, we recommend you to install `conda` ([installation instructions](https://docs.conda.io/en/latest/miniconda.html)) as it contains all the required machinery in a single and simple install. If your system is windows you might also need to install `git` ([installation instructions](https://github.com/git-guides/install-git)) to interact with this repository.
