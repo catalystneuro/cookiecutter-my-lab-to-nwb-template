@@ -1,20 +1,21 @@
 # {{cookiecutter.repo_name}}
-NWB conversion scripts for {{cookiecutter.lab}} lab data to the [neuro data without borders](https://www.nwb.org/) data format.
+NWB conversion scripts for {{cookiecutter.lab}} lab data to the [neuro data without borders](https://nwb-overview.readthedocs.io/) data format.
 
 ## Clone and dev install
 To run the following repo you need to have installed both git and pip then do the following.
 
 ```
-$ git clone https://github.com/catalystneuro/{{cookiecutter.repo_name}}
-$ pip install -e .
+git clone https://github.com/catalystneuro/{{cookiecutter.repo_name}}
+cd {{cookiecutter.repo_name}}
+pip install -e .
 ```
 
 Alternatively, to clone the repository and set up a conda environment, do:
 ```
-$ git clone https://github.com/catalystneuro/{{cookiecutter.repo_name}}
-$ cd nwb-conversion-tools
-$ conda env create --file make_env.yml
-$ conda activate {{cookiecutter.repo_name}}-env
+git clone https://github.com/catalystneuro/{{cookiecutter.repo_name}}
+cd {{cookiecutter.repo_name}}
+conda env create --file make_env.yml
+conda activate {{cookiecutter.repo_name}}-env
 ```
 
 ## Repository structure
