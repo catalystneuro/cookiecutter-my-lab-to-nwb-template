@@ -1,5 +1,5 @@
 """Primary class defining conversion of experiment-specific behavior."""
-from nwb_conversion_tools.basedatainterface import BaseDataInterface
+from neuroconv.basedatainterface import BaseDataInterface
 
 class {{cookiecutter.conversion_name_camel_case}}BehaviorInterface(BaseDataInterface):
     """My behavior interface docstring"""

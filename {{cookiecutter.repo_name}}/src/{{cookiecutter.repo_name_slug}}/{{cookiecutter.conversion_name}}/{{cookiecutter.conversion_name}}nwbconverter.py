@@ -1,5 +1,5 @@
 """Primary NWBConverter class for this dataset."""
-from nwb_conversion_tools import (
+from neuroconv import (
     NWBConverter,
     SpikeGLXRecordingInterface,
     SpikeGLXLFPInterface,
