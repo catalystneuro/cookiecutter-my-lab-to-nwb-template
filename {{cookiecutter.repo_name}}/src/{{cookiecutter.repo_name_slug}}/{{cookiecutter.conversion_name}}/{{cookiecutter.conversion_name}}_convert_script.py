@@ -9,7 +9,6 @@ example_path = Path("D:/ExampleNWBConversion")
 example_session_id = example_path.stem
 nwbfile_path = example_path / f"{example_session_id}.nwb"
 
-metadata_path = Path(__file__) / "{{cookiecutter.conversion_name}}_metadata.yaml"
 
 source_data = dict(
     Recording=dict(),
@@ -20,9 +19,10 @@ source_data = dict(
 
 converter = {{cookiecutter.conversion_name_camel_case}}NWBConverter(source_data=source_data)
 
-# Update default metadata with the one in the yaml file
+# Update default metadata with the one in the editable yaml file in this directory
+editable_metadata_path = Path(__file__).parent / "{{cookiecutter.conversion_name}}_metadata.yaml"
+editable_metadata = load_dict_from_file(editable_metadata_path)
 metadata = converter.get_metadata()
-metadata_from_yaml = load_dict_from_file(metadata_path)
-metadata = dict_deep_update(metadata, metadata_from_yaml)
+metadata = dict_deep_update(metadata, editable_metadata)
 
 converter.run_conversion(metadata=metadata, nwbfile_path=nwbfile_path)
