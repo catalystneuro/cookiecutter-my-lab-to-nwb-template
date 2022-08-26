@@ -1,6 +1,6 @@
 """Primary NWBConverter class for this dataset."""
-from neuroconv import (
-    NWBConverter,
+from neuroconv import NWBConverter
+from neuroconv.datainterfaces import (
     SpikeGLXRecordingInterface,
     SpikeGLXLFPInterface,
     PhySortingInterface,
