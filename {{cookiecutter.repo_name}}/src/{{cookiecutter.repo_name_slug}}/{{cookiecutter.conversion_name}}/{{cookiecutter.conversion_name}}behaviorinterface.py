@@ -1,4 +1,6 @@
 """Primary class defining conversion of experiment-specific behavior."""
+from pynwb.file import NWBFile
+
 from neuroconv.basedatainterface import BaseDataInterface
 
 class {{cookiecutter.conversion_name_camel_case}}BehaviorInterface(BaseDataInterface):
@@ -10,8 +12,10 @@ class {{cookiecutter.conversion_name_camel_case}}BehaviorInterface(BaseDataInter
 
     def get_metadata(self):
         # Automatically retrieve as much metadata as possible
-        pass
+        
+        return dict()
 
-    def run_conversion(self):
+    def run_conversion(sel, nwbfile: NWBFile, metadata: dict):
         # All the custom code to write through PyNWB
-        pass
+        
+        return nwbfile
