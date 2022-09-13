@@ -59,3 +59,10 @@ The last step is to create an empty repo with the same name as the generated dir
 ### Pre-commit
 For new repos, an extra step of allowing the black auto-commit CI bot may have to be enabled at: https://results.pre-commit.ci/
 
+To enable the pre-commit hook locally use the two following steps:
+```
+pip install pre-commit
+pre-commit install
+```
+
+The `.pre-commit-config.yaml` is already included in the repository.
