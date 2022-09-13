@@ -15,7 +15,7 @@ class {{cookiecutter.conversion_name_camel_case}}BehaviorInterface(BaseDataInter
         
         return dict()
 
-    def run_conversion(sel, nwbfile: NWBFile, metadata: dict):
+    def run_conversion(self, nwbfile: NWBFile, metadata: dict):
         # All the custom code to write through PyNWB
         
         return nwbfile

@@ -9,13 +9,19 @@ example_path = Path("D:/ExampleNWBConversion")
 example_session_id = example_path.stem
 nwbfile_path = example_path / f"{example_session_id}.nwb"
 
+source_data = dict()
 
-source_data = dict(
-    Recording=dict(),
-    LFP=dict(),
-    Sorting=dict(),
-    Behavior=dict(),
-)
+# Add Recording
+source_data.update(dict(Recording=dict()))
+
+# Add LFP
+source_data.update(dict(LFP=dict()))
+
+# Add Sorting
+source_data.update(dict(Sorting=dict()))
+
+# Add Behavior
+source_data.update(dict(Behavior=dict()))
 
 converter = {{cookiecutter.conversion_name_camel_case}}NWBConverter(source_data=source_data)
 
