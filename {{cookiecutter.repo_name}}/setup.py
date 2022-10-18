@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
+from pathlib import Path
 from setuptools import setup, find_packages
-import os
 
-here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, "requirements.txt")) as f:
-    install_requires = f.read().strip().split("\n")
+requirements_file_path = Path(__file__).parent / "requirements.txt"
+with open(requirements_file_path) as file:
+    install_requires = file.readlines()
 
 with open("README.md", "r") as f:
     long_description = f.read()
