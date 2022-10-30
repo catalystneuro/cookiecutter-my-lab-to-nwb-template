@@ -42,7 +42,7 @@ After the questions in the prompt are answered as above, `cookiecutter` generate
         ├── eric_kandel_lab_to_nwb
         │   └── brenda_milner_2022
         │       ├── brenda_milner_2022behaviorinterface.py
-        │       ├── brenda_milner_2022_convert_script.py
+        │       ├── brenda_milner_2022_convert_session.py
         │       ├── brenda_milner_2022_metadata.yml
         │       ├── brenda_milner_2022nwbconverter.py
         │       ├── brenda_milner_2022_requirements.txt

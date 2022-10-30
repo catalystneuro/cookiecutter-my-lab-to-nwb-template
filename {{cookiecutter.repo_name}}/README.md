@@ -37,9 +37,9 @@ Each conversion is organized in a directory of its own in the `src` directory:
     └── src
         ├── {{cookiecutter.repo_name_slug}}
         │   ├── conversion_directory_1
-        │   └── {{cookiecutter.conversion_name}}`
+        │   └── {{cookiecutter.conversion_name}}
         │       ├── {{cookiecutter.conversion_name}}behaviorinterface.py
-        │       ├── {{cookiecutter.conversion_name}}_convert_script.py
+        │       ├── {{cookiecutter.conversion_name}}_convert_session.py
         │       ├── {{cookiecutter.conversion_name}}_metadata.yml
         │       ├── {{cookiecutter.conversion_name}}nwbconverter.py
         │       ├── {{cookiecutter.conversion_name}}_requirements.txt
@@ -52,8 +52,8 @@ Each conversion is organized in a directory of its own in the `src` directory:
 
  For example, for the conversion `{{cookiecutter.conversion_name}}` you can find a directory located in `src/{{cookiecutter.repo_name}}/{{cookiecutter.conversion_name}}`. Inside each conversion directory you can find the following files:
 
-* `{{cookiecutter.conversion_name}}_convert_script.py`: this is the cemtral script that you must run in order to perform the full conversion.
-* `{{cookiecutter.conversion_name}}_requirements.txt`: dependencies specific to this conversion specifically.
+* `{{cookiecutter.conversion_name}}_convert_sesion.py`: this script defines the function to convert one full session of the conversion. 
+* `{{cookiecutter.conversion_name}}_requirements.txt`: dependencies specific to this conversion.
 * `{{cookiecutter.conversion_name}}_metadata.yml`: metadata in yaml format for this specific conversion.
 * `{{cookiecutter.conversion_name}}behaviorinterface.py`: the behavior interface. Usually ad-hoc for each conversion.
 * `{{cookiecutter.conversion_name}}nwbconverter.py`: the place where the `NWBConverter` class is defined.

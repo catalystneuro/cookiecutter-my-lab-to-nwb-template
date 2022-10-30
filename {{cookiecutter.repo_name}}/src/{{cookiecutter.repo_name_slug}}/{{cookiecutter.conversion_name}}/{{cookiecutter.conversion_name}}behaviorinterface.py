@@ -1,21 +1,22 @@
-"""Primary class defining conversion of experiment-specific behavior."""
+"""Primary class for converting experiment-specific behavior."""
 from pynwb.file import NWBFile
 
 from neuroconv.basedatainterface import BaseDataInterface
 
 class {{cookiecutter.conversion_name_camel_case}}BehaviorInterface(BaseDataInterface):
-    """My behavior interface docstring"""
+    """Behavior interface for {{cookiecutter.conversion_name}} conversion"""
 
     def __init__(self):
-        # Point to data
+        # This should load the data lazily and prepare variables you need
         pass
 
     def get_metadata(self):
         # Automatically retrieve as much metadata as possible
+        metadata = super().get_metadata()
         
-        return dict()
+        return metadata
 
     def run_conversion(self, nwbfile: NWBFile, metadata: dict):
-        # All the custom code to write through PyNWB
+        # All the custom code to write to PyNWB
         
         return nwbfile
