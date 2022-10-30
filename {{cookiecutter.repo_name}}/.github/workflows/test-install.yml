@@ -27,4 +27,4 @@ jobs:
     - name: Test module load
       uses: jannekem/run-python-script-action@v1
       with:
-        script: import my_lab_to_nwb
+        script: import {{cookiecutter.repo_name_slug}}
