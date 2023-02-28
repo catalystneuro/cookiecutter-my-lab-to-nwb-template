@@ -31,7 +31,7 @@ For conversions concerning data under embargo we suggest a name following the pa
 
 After the questions in the prompt are answered as above, `cookiecutter` generates a directory with the following structure:
 
-    eric-kandel-lab-to-nwb/
+    tank-lab-to-nwb/
     ├── LICENSE
     ├── make_env.yml
     ├── pyproject.toml
@@ -39,13 +39,13 @@ After the questions in the prompt are answered as above, `cookiecutter` generate
     ├── requirements.txt
     ├── setup.py
     └── src
-        ├── eric_kandel_lab_to_nwb
-        │   └── brenda_milner_2022
-        │       ├── brenda_milner_2022behaviorinterface.py
-        │       ├── brenda_milner_2022_convert_session.py
-        │       ├── brenda_milner_2022_metadata.yml
-        │       ├── brenda_milner_2022nwbconverter.py
-        │       ├── brenda_milner_2022_requirements.txt
+        ├── tank_lab_to_nwb
+        │   └── towers_task
+        │       ├── behaviorinterface.py
+        │       ├── convert_session.py
+        │       ├── metadata.yml
+        │       ├── nwbconverter.py
+        │       ├── requirements.txt
         │       └── __init__.py
         └── __init__.py
 
