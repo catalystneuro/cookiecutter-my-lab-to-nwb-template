@@ -1,0 +1,1 @@
+neuroconv==0.2.0   # Pinned dependencies to specific versions
