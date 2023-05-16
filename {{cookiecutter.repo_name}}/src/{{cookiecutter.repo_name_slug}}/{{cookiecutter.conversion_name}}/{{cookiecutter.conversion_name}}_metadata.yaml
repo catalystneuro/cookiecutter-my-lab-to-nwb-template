@@ -10,3 +10,5 @@ NWBFile:
     - Last, First Middle
 Subject:
   species: Rattus norvegicus
+  age: TBD
+  sex: TBD
