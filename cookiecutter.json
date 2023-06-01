@@ -3,6 +3,6 @@
     "repo_name": "{{cookiecutter.lab.lower().replace(' ', '-') + '-lab-to-nwb'}}",
     "conversion_name": "embargo2002a",
     "_copy_without_render": [
-      ".github/workflows/*"
+      ".github/workflows/add-to-dashboard.yml", ".github/workflows/auto-publish.yml"
   ]
   }

@@ -1,3 +1,4 @@
+{% raw %}
 name: Installation
 on:
   workflow_dispatch:
@@ -27,4 +28,5 @@ jobs:
     - name: Install package
       run: pip install -e .
     - name: Test module load
-      run: python -c "import {{cookiecutter.repo_name_slug}}"
+      run: python -c "import {% endraw %}{{cookiecutter.repo_name_slug}}{% raw %}"
+{% endraw %}
