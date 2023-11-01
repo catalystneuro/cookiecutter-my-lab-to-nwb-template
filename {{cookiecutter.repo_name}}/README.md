@@ -16,7 +16,7 @@ We recommend that you install the package inside a [virtual environment](https:/
 ### Running a specific conversion
 Once you have installed the package with pip, you can run any of the conversion scripts in a notebook or a python file:
 
-https://github.com/catalystneuro/{{cookiecutter.repo_name}}//tree/main/src/{{cookiecutter.conversion_name}}/{{cookiecutter.conversion_name}}_conversion_script.py
+https://github.com/catalystneuro/{{cookiecutter.repo_name}}//tree/main/src/{{cookiecutter.conversion_name}}/{{cookiecutter.conversion_name}}_convert_session.py
 
 
 
@@ -54,7 +54,7 @@ pip install -r src/{{cookiecutter.repo_name_slug}}/{{cookiecutter.conversion_nam
 
 You can run a specific conversion with the following command:
 ```
-python src/{{cookiecutter.repo_name_slug}}/{{cookiecutter.conversion_name}}/{{cookiecutter.conversion_name}}_conversion_script.py
+python src/{{cookiecutter.repo_name_slug}}/{{cookiecutter.conversion_name}}/{{cookiecutter.conversion_name}}_convert_session.py
 ```
 
 ## Repository structure
