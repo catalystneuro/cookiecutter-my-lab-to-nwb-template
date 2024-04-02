@@ -10,13 +10,14 @@ repos:
     hooks:
     -   id: black
         exclude: ^docs/
--   repo: local
-    hooks:
-    -   id: freeze-dependencies
-        name: Freeze Dependencies
-        entry: python -m freeze_dependencies
-        language: system
-        pass_filenames: false
-ci:
-  skip:
-    - freeze-dependencies
+# Uncomment hook below if you want to keep track of dependencies with every commit
+# -   repo: local
+#     hooks:
+#     -   id: freeze-dependencies
+#         name: Freeze Dependencies
+#         entry: python -m freeze_dependencies
+#         language: system
+#         pass_filenames: false
+# ci:
+#   skip:
+#     - freeze-dependencies
