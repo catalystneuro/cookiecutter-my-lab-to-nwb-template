@@ -107,9 +107,14 @@ if __name__ == "__main__":
     # Parameters for conversion
     data_dir_path = Path("/Directory/With/Raw/Formats/")
     output_dir_path = Path("~/conversion_nwb/")
+    max_workers = 1
     stub_test = False
+    verbose = False
 
-    session_to_nwb(data_dir_path=data_dir_path,
-                    output_dir_path=output_dir_path,
-                    stub_test=stub_test,
-                    )
+    dataset_to_nwb(
+        data_dir_path=data_dir_path,
+        output_dir_path=output_dir_path,
+        max_workers=max_workers,
+        stub_test=False,
+        verbose=False,
+    )
