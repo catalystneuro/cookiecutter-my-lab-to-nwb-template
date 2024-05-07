@@ -2,7 +2,6 @@
 from neuroconv import NWBConverter
 from neuroconv.datainterfaces import (
     SpikeGLXRecordingInterface,
-    SpikeGLXLFPInterface,
     PhySortingInterface,
 )
 
@@ -14,7 +13,6 @@ class {{cookiecutter.conversion_name_camel_case}}NWBConverter(NWBConverter):
 
     data_interface_classes = dict(
         Recording=SpikeGLXRecordingInterface,
-        LFP=SpikeGLXLFPInterface,
         Sorting=PhySortingInterface,
         Behavior={{cookiecutter.conversion_name_camel_case}}BehaviorInterface,
     )

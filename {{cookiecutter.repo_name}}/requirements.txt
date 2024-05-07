@@ -1,3 +1,0 @@
-neuroconv
-nwbwidgets
-nwbinspector
