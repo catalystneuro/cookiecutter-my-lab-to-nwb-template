@@ -99,7 +99,11 @@ def get_session_to_nwb_kwargs_per_session(
     list[dict[str, Any]]
         A list of dictionaries containing the kwargs for session_to_nwb for each session.
     """
-    raise NotImplementedError # Implement this function to return the kwargs for session_to_nwb for each session
+     #####
+     # # Implement this function to return the kwargs for session_to_nwb for each session
+     # This can be a specific list with hard-coded sessions, a path expansion or any conversion specific logic that you might need
+     #####
+    raise NotImplementedError 
 
 
 if __name__ == "__main__":
