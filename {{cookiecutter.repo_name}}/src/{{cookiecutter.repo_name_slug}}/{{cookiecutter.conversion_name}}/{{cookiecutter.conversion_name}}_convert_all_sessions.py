@@ -14,7 +14,6 @@ def dataset_to_nwb(
     data_dir_path: Union[str, Path],
     output_dir_path: Union[str, Path],
     max_workers: int = 1,
-    stub_test: bool = False,
     verbose: bool = True,
 ):
     """Convert the entire dataset to NWB.
@@ -27,8 +26,6 @@ def dataset_to_nwb(
         The path to the directory where the NWB files will be saved.
     max_workers : int, optional
         The number of workers to use for parallel processing, by default 1
-    stub_test : bool, optional
-        Whether to run a stub test, by default False
     verbose : bool, optional
         Whether to print verbose output, by default True
     """
@@ -36,7 +33,6 @@ def dataset_to_nwb(
     session_to_nwb_kwargs_per_session = get_session_to_nwb_kwargs_per_session(
         data_dir_path=data_dir_path,
         output_dir_path=output_dir_path,
-        stub_test=stub_test,
         verbose=verbose,
     )
 
@@ -78,7 +74,6 @@ def get_session_to_nwb_kwargs_per_session(
     *,
     data_dir_path: Union[str, Path],
     output_dir_path: Union[str, Path],
-    stub_test: bool = False,
     verbose: bool = True,
 ):
     """Get the kwargs for session_to_nwb for each session in the dataset.
@@ -89,8 +84,6 @@ def get_session_to_nwb_kwargs_per_session(
         The path to the directory containing the raw data.
     output_dir_path : Union[str, Path]
         The path to the directory where the NWB files will be saved.
-    stub_test : bool, optional
-        Whether to run a stub test, by default False
     verbose : bool, optional
         Whether to print verbose output, by default True
 
