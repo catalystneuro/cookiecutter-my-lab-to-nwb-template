@@ -105,13 +105,11 @@ if __name__ == "__main__":
     data_dir_path = Path("/Directory/With/Raw/Formats/")
     output_dir_path = Path("~/conversion_nwb/")
     max_workers = 1
-    stub_test = False
     verbose = False
 
     dataset_to_nwb(
         data_dir_path=data_dir_path,
         output_dir_path=output_dir_path,
         max_workers=max_workers,
-        stub_test=False,
         verbose=False,
     )
