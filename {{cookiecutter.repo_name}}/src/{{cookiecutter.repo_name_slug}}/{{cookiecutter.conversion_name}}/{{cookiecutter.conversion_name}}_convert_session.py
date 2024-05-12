@@ -25,11 +25,7 @@ def session_to_nwb(data_dir_path: Union[str, Path], output_dir_path: Union[str, 
 
     # Add Recording
     source_data.update(dict(Recording=dict()))
-    conversion_options.update(dict(Recording=dict()))
-
-    # Add LFP
-    source_data.update(dict(LFP=dict()))
-    conversion_options.update(dict(LFP=dict()))
+    conversion_options.update(dict(Recording=dict(stub_test=stub_test)))
 
     # Add Sorting
     source_data.update(dict(Sorting=dict()))
@@ -53,6 +49,8 @@ def session_to_nwb(data_dir_path: Union[str, Path], output_dir_path: Union[str, 
     editable_metadata_path = Path(__file__).parent / "{{cookiecutter.conversion_name}}_metadata.yaml"
     editable_metadata = load_dict_from_file(editable_metadata_path)
     metadata = dict_deep_update(metadata, editable_metadata)
+
+    metadata["Subject"]["subject_id"] = "a_subject_id"  # Modify here or in the yaml file
 
     # Run conversion
     converter.run_conversion(metadata=metadata, nwbfile_path=nwbfile_path, conversion_options=conversion_options)
