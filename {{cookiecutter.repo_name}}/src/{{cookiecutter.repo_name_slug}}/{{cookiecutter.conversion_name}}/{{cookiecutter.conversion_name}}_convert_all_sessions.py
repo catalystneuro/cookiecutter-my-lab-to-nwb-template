@@ -32,13 +32,13 @@ def dataset_to_nwb(
     data_dir_path = Path(data_dir_path)
     session_to_nwb_kwargs_per_session = get_session_to_nwb_kwargs_per_session(
         data_dir_path=data_dir_path,
-        output_dir_path=output_dir_path,
-        verbose=verbose,
     )
 
     futures = []
     with ProcessPoolExecutor(max_workers=max_workers) as executor:
         for session_to_nwb_kwargs in session_to_nwb_kwargs_per_session:
+            session_to_nwb_kwargs["output_dir_path"] = output_dir_path
+            session_to_nwb_kwargs["verbose"] = verbose
             exception_file_path = data_dir_path / f"ERROR_<nwbfile_name>.txt" # Add error file path here
             futures.append(
                 executor.submit(
@@ -73,8 +73,6 @@ def safe_session_to_nwb(*, session_to_nwb_kwargs: dict, exception_file_path: Uni
 def get_session_to_nwb_kwargs_per_session(
     *,
     data_dir_path: Union[str, Path],
-    output_dir_path: Union[str, Path],
-    verbose: bool = True,
 ):
     """Get the kwargs for session_to_nwb for each session in the dataset.
 
@@ -82,10 +80,6 @@ def get_session_to_nwb_kwargs_per_session(
     ----------
     data_dir_path : Union[str, Path]
         The path to the directory containing the raw data.
-    output_dir_path : Union[str, Path]
-        The path to the directory where the NWB files will be saved.
-    verbose : bool, optional
-        Whether to print verbose output, by default True
 
     Returns
     -------
