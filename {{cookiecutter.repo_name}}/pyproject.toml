@@ -23,7 +23,7 @@ dependencies = [
 Repository="https://github.com/catalystneuro/{{cookiecutter.repo_name}}"
 
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
@@ -35,7 +35,7 @@ include = ["*"]
 
 [tool.black]
 line-length = 120
-target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+target-version = ['py39', 'py310', 'py311']
 include = '\.pyi?$'
 extend-exclude = '''
 /(
@@ -59,3 +59,9 @@ extend-exclude = '''
 profile = "black"
 reverse_relative = true
 known_first_party = ["{{cookiecutter.repo_name_slug}}"]
+
+
+[tool.codespell]
+skip = '.git*,*.pdf,*.css'
+check-hidden = true
+ignore-words-list = 'assertin'
