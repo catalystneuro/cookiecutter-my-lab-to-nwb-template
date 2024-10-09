@@ -7,7 +7,7 @@ from neuroconv.utils import DeepDict
 class {{cookiecutter.conversion_name_camel_case}}BehaviorInterface(BaseDataInterface):
     """Behavior interface for {{cookiecutter.conversion_name}} conversion"""
 
-    keywords = ["behavior"]
+    keywords = ("behavior",)
     
     def __init__(self):
         # This should load the data lazily and prepare variables you need
