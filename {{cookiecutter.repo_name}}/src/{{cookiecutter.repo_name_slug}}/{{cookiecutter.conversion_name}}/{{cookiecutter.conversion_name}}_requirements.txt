@@ -1,3 +1,0 @@
-nwb-conversion-tools==0.11.1   # Example of specific pinned dependecy
-some-extra-package==1.11.3  # Example of another extra package that's necessary for the current conversion
-roiextractors @ git+https://github.com/catalystneuro/roiextractors.git@8db5f9cb3a7ee5efee49b7fd0b694c7a8105519a # Github pinned dependency

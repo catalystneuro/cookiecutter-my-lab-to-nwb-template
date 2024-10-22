@@ -6,7 +6,7 @@ from zoneinfo import ZoneInfo
 
 from neuroconv.utils import load_dict_from_file, dict_deep_update
 
-from {{cookiecutter.repo_name_slug}}.{{cookiecutter.conversion_name}} import {{cookiecutter.conversion_name_camel_case}}NWBConverter
+from .{{cookiecutter.conversion_name}} import {{cookiecutter.conversion_name_camel_case}}NWBConverter
 
 
 def session_to_nwb(data_dir_path: Union[str, Path], output_dir_path: Union[str, Path], stub_test: bool = False):
@@ -39,10 +39,7 @@ def session_to_nwb(data_dir_path: Union[str, Path], output_dir_path: Union[str, 
 
     # Add datetime to conversion
     metadata = converter.get_metadata()
-    datetime.datetime(
-        year=2020, month=1, day=1, tzinfo=ZoneInfo("US/Eastern")
-    )
-    date = datetime.datetime.today()  # TO-DO: Get this from author
+    date = datetime.datetime(year=2020, month=1, day=1, tzinfo=ZoneInfo("US/Eastern"))
     metadata["NWBFile"]["session_start_time"] = date
 
     # Update default metadata with the editable in the corresponding yaml file
@@ -63,7 +60,11 @@ if __name__ == "__main__":
     output_dir_path = Path("~/conversion_nwb/")
     stub_test = False
 
+<<<<<<< HEAD:{{cookiecutter.repo_name}}/src/{{cookiecutter.repo_name_slug}}/{{cookiecutter.conversion_name}}/convert_session.py
+    session_to_nwb(data_dir_path=data_dir_path, output_dir_path=output_dir_path, stub_test=stub_test)
+=======
     session_to_nwb(data_dir_path=data_dir_path,
                     output_dir_path=output_dir_path,
                     stub_test=stub_test,
                     )
+>>>>>>> main:{{cookiecutter.repo_name}}/src/{{cookiecutter.repo_name_slug}}/{{cookiecutter.conversion_name}}/{{cookiecutter.conversion_name}}_convert_session.py
