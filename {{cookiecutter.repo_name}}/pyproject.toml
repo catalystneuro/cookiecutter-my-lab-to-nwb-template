@@ -22,6 +22,11 @@ dependencies = [
 [project.urls]
 Repository="https://github.com/catalystneuro/{{cookiecutter.repo_name}}"
 
+[project.optional-dependencies]
+{{cookiecutter.conversion_name}} = [
+  "neuroconv==0.2.0"   # Pinned dependencies to specific versions
+]
+
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
@@ -60,8 +65,22 @@ profile = "black"
 reverse_relative = true
 known_first_party = ["{{cookiecutter.repo_name_slug}}"]
 
-
 [tool.codespell]
 skip = '.git*,*.pdf,*.css'
 check-hidden = true
 ignore-words-list = 'assertin'
+
+[tool.ruff]
+
+[tool.ruff.lint]
+select = [
+    "F401",  # Unused import
+    "I",  # All isort rules
+]
+fixable = ["ALL"]
+
+
+[tool.ruff.lint.isort]
+relative-imports-order = "closest-to-furthest"
+known-first-party = ["neuroconv"]
+

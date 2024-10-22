@@ -1,4 +1,8 @@
 NWBFile:
+  keywords:
+    - Keyword1
+    - Keyword2
+    - Keyword3
   related_publications:
     https://doi.org/### or link to APA or MLA citation of the publication
   session_description:
@@ -10,5 +14,8 @@ NWBFile:
     - Last, First Middle
 Subject:
   species: Rattus norvegicus
+  description: A rich text description of the subject
   age: TBD  # in ISO 8601, such as "P1W2D"
   sex: TBD  # One of M, F, U, or O
+  date_of_birth: 2014-06-22 00:00:00-04:00  # Example
+
