@@ -3,10 +3,12 @@ NWBFile:
     https://doi.org/### or link to APA or MLA citation of the publication
   session_description:
     A rich text description of the experiment. Can also just be the abstract of the publication.
-  institution: My Institution
+  institution: Institution where the lab is located
   lab: {{cookiecutter.lab.title()}}
   experimenter:
     - Last, First Middle
     - Last, First Middle
 Subject:
   species: Rattus norvegicus
+  age: TBD  # in ISO 8601, such as "P1W2D"
+  sex: TBD  # One of M, F, U, or O

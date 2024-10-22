@@ -128,8 +128,22 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# vscode
+.vscode/*
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+*.code-workspace
+
+# pycharm
+.idea/*
+
 # Local History for Visual Studio Code
 .history/
 
 #Mac
 .DS_Store
+
+# NWB files
+**.nwb

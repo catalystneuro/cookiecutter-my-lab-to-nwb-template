@@ -20,10 +20,14 @@ Then, use the following `cookiecutter` command to generate a `CatalystNeuro` con
 
 This will ask some questions that determine the project structure as in the following example:
 
+    lab [Lab Name]: Eric Kandel
+    repo_name [eric-kandel-lab-to-nwb]:
+    conversion_name [embargo2002a]: brenda_milner_2022
     lab [Lab Name]: Tank
     repo_name [tank-lab-to-nwb]: 
     conversion_name [embargo2002a]: towers_task
 
+Where the `lab` usually corresponds to the principal investigator name, `repo_name` is the name of the github repositry and `conversion_name` is the name of the specific conversion to be carried out.
 Where the `lab` usually corresponds to the principal investigator name, `repo_name` is the name of the github 
 repositry and `conversion_name` is the name of the specific conversion to be carried out. 
 
