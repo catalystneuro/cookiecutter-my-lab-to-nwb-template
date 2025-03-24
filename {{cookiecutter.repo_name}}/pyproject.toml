@@ -39,10 +39,10 @@ include = [
 ]  # This includes the yaml (usually metadata) and any schemas you might need on both the sdist and wheel
 
 [tool.hatch.build.targets.wheel]
-packages = ["src"]
+packages = ["src/{{cookiecutter.repo_name_slug}}"]
 
 [tool.hatch.build.targets.sdist]
-include = ["src"]
+include = ["src/git{{cookiecutter.repo_name_slug}}"]
 
 [tool.black]
 line-length = 120
