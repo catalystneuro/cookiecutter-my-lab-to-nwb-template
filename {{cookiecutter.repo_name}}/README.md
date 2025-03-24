@@ -78,17 +78,14 @@ Each conversion is organized in a directory of its own in the `src` directory:
     ├── make_env.yml
     ├── pyproject.toml
     ├── README.md
-    ├── requirements.txt
-    ├── setup.py
     └── src
         ├── {{cookiecutter.repo_name_slug}}
         │   └── {{cookiecutter.conversion_name}}
-        │       ├── notes.md
+        │       ├── conversion_notes.md
         │       ├── behaviorinterface.py
         │       ├── convert_session.py
         │       ├── metadata.yml
         │       ├── nwbconverter.py
-        │       ├── notes.md
         │       └── __init__.py
         │   ├── conversion_directory_b
 
@@ -102,6 +99,6 @@ Inside each conversion directory you can find the following files:
 * `metadata.yml`: metadata in yaml format for this specific conversion.
 * `behaviorinterface.py`: the behavior interface. Usually ad-hoc for each conversion.
 * `nwbconverter.py`: the place where the `NWBConverter` class is defined.
-* `notes.md`: notes and comments concerning this specific conversion.
+* `conversion_notes.md`: notes and comments concerning this specific conversion.
 
 The directory might contain other files that are necessary for the conversion but those are the central ones.
