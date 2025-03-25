@@ -5,7 +5,7 @@ from neuroconv.datainterfaces import (
     PhySortingInterface,
 )
 
-from .{{cookiecutter.conversion_name}} import {{cookiecutter.conversion_name_camel_case}}BehaviorInterface
+from {{cookiecutter.repo_name_slug}}.{{cookiecutter.conversion_name}} import {{cookiecutter.conversion_name_camel_case}}BehaviorInterface
 
 
 class {{cookiecutter.conversion_name_camel_case}}NWBConverter(NWBConverter):
