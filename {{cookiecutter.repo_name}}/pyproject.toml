@@ -42,7 +42,7 @@ include = [
 packages = ["src/{{cookiecutter.repo_name_slug}}"]
 
 [tool.hatch.build.targets.sdist]
-include = ["src/{{cookiecutter.repo_name_slug}}"]
+packages = ["src/{{cookiecutter.repo_name_slug}}"]
 
 [tool.black]
 line-length = 120
