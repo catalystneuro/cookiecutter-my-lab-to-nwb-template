@@ -46,8 +46,6 @@ structure:
     ├── make_env.yml
     ├── pyproject.toml
     ├── README.md
-    ├── requirements.txt
-    ├── setup.py
     └── src
         ├── tank_lab_to_nwb
         │   └── towers_task

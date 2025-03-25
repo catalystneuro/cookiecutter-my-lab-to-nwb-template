@@ -6,7 +6,7 @@ from pprint import pformat
 import traceback
 from tqdm import tqdm
 
-from .{{cookiecutter.conversion_name}}_convert_session import session_to_nwb
+from .convert_session import session_to_nwb
 
 
 def dataset_to_nwb(
