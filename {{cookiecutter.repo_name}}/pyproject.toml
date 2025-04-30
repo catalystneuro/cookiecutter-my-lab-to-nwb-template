@@ -66,11 +66,6 @@ extend-exclude = '''
 )/
 '''
 
-[tool.isort]
-profile = "black"
-reverse_relative = true
-known_first-party = ["{{cookiecutter.repo_name_slug}}"]
-
 [tool.codespell]
 skip = '.git*,*.pdf,*.css'
 check-hidden = true
@@ -87,5 +82,5 @@ fixable = ["ALL"]
 
 [tool.ruff.lint.isort]
 relative-imports-order = "closest-to-furthest"
-known-first-party = ["neuroconv"]
+known-first-party = ["{{cookiecutter.repo_name_slug}}"]
 
