@@ -70,6 +70,22 @@ You can run a specific conversion with the following command:
 python src/{{cookiecutter.repo_name_slug}}/{{cookiecutter.conversion_name}}/convert_session.py
 ```
 
+## Helpful Definitions
+
+This conversion project is comprised primarily by DataInterfaces, NWBConverters, and conversion scripts.
+
+In neuroconv, a [DataInterface](https://neuroconv.readthedocs.io/en/main/user_guide/datainterfaces.html) is a class that specifies the procedure to convert a single data modality to NWB.
+This is usually accomplished with a single read operation from a distinct set of files.
+For example, in this conversion, the `{{cookiecutter.conversion_name_camel_case}}BehaviorInterface` contains the code that converts all of the behavioral data to NWB from raw <FILE_TYPE> files.
+
+In neuroconv, a [NWBConverter](https://neuroconv.readthedocs.io/en/main/user_guide/nwbconverter.html) is a class that combines many data interfaces and specifies the relationships between them, such as temporal alignment.
+This allows users to combine multiple modalities into a single NWB file in an efficient and modular way.
+
+In this conversion project, the conversion scripts determine which sessions to convert,
+instantiate the appropriate NWBConverter object,
+and convert all of the specified sessions, saving them to an output directory of .nwb files.
+
+
 ## Repository structure
 Each conversion is organized in a directory of its own in the `src` directory:
 
