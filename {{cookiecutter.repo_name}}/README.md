@@ -30,27 +30,34 @@ python convert_session.py
 ```
 
 ## Installation from GitHub
-Another option is to install the package directly from GitHub. This option has the advantage that the source code 
-can be modified if you need to amend some of the code we originally provided to adapt to future experimental 
-differences. To install the conversion from GitHub you will need to use `git` ([installation instructions] (https://github.com/git-guides/install-git)). 
-We also recommend the installation of `conda` ([installation instructions](https://docs.conda.io/en/latest/miniconda.html)) as it contains all the required 
-machinery in a single and simple install.
+Another option is to install the package directly from Github. This option has the advantage that the source code can be modified if you need to amend some of the code we originally provided to adapt to future experimental differences. To install the conversion from GitHub you will need to use `git` ([installation instructions](https://github.com/git-guides/install-git)). We also recommend the installation of `conda` ([installation instructions](https://docs.conda.io/en/latest/miniconda.html)) as it contains all the required machinery in a single and simple install.
 
 From a terminal (note that conda should install one in your system) you can do the following:
 
-```
+```bash
 git clone https://github.com/catalystneuro/{{cookiecutter.repo_name}}
 cd {{cookiecutter.repo_name}}
 conda env create --file make_env.yml
-conda activate {{cookiecutter.repo_name}}-env
+conda activate {{cookiecutter.repo_name}}_env
 ```
 
 This creates a [conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html) which isolates the conversion code from your system libraries.  We recommend that you run all your conversion related tasks and analysis from the created environment in order to minimize issues related to package dependencies.
 
-Alternatively, if you want to avoid conda altogether (for example if you use another virtual environment tool) you 
-can install the repository with the following commands using only pip:
-
+If you fork this repository and are running code from that fork, instead use
+```bash
+git clone https://github.com/your_github_username/{{cookiecutter.repo_name}}
 ```
+
+Then you can run
+```bash
+cd {{cookiecutter.repo_name}}
+conda env create --file make_env.yml
+conda activate {{cookiecutter.repo_name}}_env
+```
+
+Alternatively, if you want to avoid conda altogether (for example if you use another virtual environment tool) you can install the repository with the following commands using only pip:
+
+```bash
 git clone https://github.com/catalystneuro/{{cookiecutter.repo_name}}
 cd {{cookiecutter.repo_name}}
 pip install --editable .
@@ -58,6 +65,7 @@ pip install --editable .
 
 Note:
 both of the methods above install the repository in [editable mode](https://pip.pypa.io/en/stable/cli/pip_install/#editable-installs).
+The dependencies for this environment are stored in the dependencies section of the `pyproject.toml` file.
 
 ### Running a specific conversion
 If the project has more than one conversion, you can install the requirements for a specific conversion with the following command:
