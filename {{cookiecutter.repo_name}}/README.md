@@ -133,3 +133,12 @@ The directory might contain other files that are necessary for the conversion bu
 This project implements a comprehensive pipeline for converting electrophysiology and behavioral data to NWB format:
 
 **Source Data → Data Interfaces → NWB Files**
+
+## Customizing for New Datasets
+To create a new conversion:
+1. **Create a new dataset directory** following the naming convention `{experimenter}_{year}`
+2. **Implement dataset-specific interfaces** inheriting from existing interfaces as appropriate
+3. **Create an NWBConverter class** that combines all interfaces for your dataset
+4. **Write conversion scripts** for single sessions and batch processing
+6. **Create metadata files** with dataset-specific experimental parameters
+Each conversion should be self-contained within its directory and follow the established patterns for consistency and maintainability.
