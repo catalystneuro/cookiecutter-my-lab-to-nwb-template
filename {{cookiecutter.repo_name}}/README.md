@@ -126,3 +126,10 @@ Inside each conversion directory you can find the following files:
 * `conversion_notes.md`: notes and comments concerning this specific conversion.
 
 The directory might contain other files that are necessary for the conversion but those are the central ones.
+
+
+## Data Conversion Pipeline
+
+This project implements a comprehensive pipeline for converting electrophysiology and behavioral data to NWB format:
+
+**Source Data → Data Interfaces → NWB Files**
