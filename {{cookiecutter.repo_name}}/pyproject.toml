@@ -28,15 +28,21 @@ Repository="https://github.com/catalystneuro/{{cookiecutter.repo_name}}"
 ]
 
 [build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.setuptools]
-include-package-data = true
+[tool.hatch.build]
+include = [
+  "*.yaml",
+  "*.yml",
+  "*.json",
+]  # This includes the yaml (usually metadata) and any schemas you might need on both the sdist and wheel
 
-[tool.setuptools.packages.find]
-where = ["src"]
-include = ["*"]
+[tool.hatch.build.targets.wheel]
+packages = ["src/{{cookiecutter.repo_name_slug}}"]
+
+[tool.hatch.build.targets.sdist]
+packages = ["src/{{cookiecutter.repo_name_slug}}"]
 
 [tool.black]
 line-length = 120
@@ -60,11 +66,6 @@ extend-exclude = '''
 )/
 '''
 
-[tool.isort]
-profile = "black"
-reverse_relative = true
-known_first_party = ["{{cookiecutter.repo_name_slug}}"]
-
 [tool.codespell]
 skip = '.git*,*.pdf,*.css'
 check-hidden = true
@@ -78,7 +79,6 @@ select = [
     "I",  # All isort rules
 ]
 fixable = ["ALL"]
-
 
 [tool.ruff.lint.isort]
 relative-imports-order = "closest-to-furthest"
